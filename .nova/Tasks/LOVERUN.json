@@ -1,0 +1,19 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true
+    },
+    "clean" : {
+      "postActions" : [
+        {
+          "script" : "killall love",
+          "type" : "runScript"
+        }
+      ]
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "killall love\nopen -n -a love .\/"
+    }
+  }
+}
